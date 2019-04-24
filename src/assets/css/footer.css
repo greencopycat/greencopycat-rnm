@@ -1,0 +1,10 @@
+footer {
+  width: 100%;
+  height: 3rem;
+  background-color: rgba(122, 122, 122, .75);
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  color: white;
+  white-space: nowrap;
+}

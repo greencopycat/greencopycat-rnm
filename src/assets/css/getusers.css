@@ -1,0 +1,35 @@
+.field-row {
+  display: flex;
+  background: #666;
+  height: 3rem;
+  line-height: 2.8;
+  justify-content: center;
+  align-items: center;
+}
+.field-row label {
+  color: white;
+  font-weight: 600;
+}
+.field-row select,
+.field-row input {
+  margin-left: 1rem;
+  height: 1.5rem;
+  box-sizing: border-box;
+  border: thin solid transparent;
+  border-radius: .1rem;
+}
+
+.info-card {
+  box-sizing: border-box;
+  border-radius: .3rem;
+  border: thin solid #ccc;
+  padding: 1rem 1.5rem;
+  margin: .5rem;
+  line-height: 2;
+  color: #fff;
+}
+.content-box {
+  background-color: #666;
+  padding: .5rem;
+  margin-top: .5rem;
+}

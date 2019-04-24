@@ -1,0 +1,133 @@
+.filmstrip {
+  height: 15rem;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  color: #666;
+}
+.filmstrip-wrapper {
+  position: relative;
+  height: 10rem;
+}
+.filmstrip .btn-left,
+.filmstrip .btn-right {
+  width: 3rem;
+  height: 3rem;
+  align-self: center;
+  border: .1rem solid rgba(16,16,16,.8);
+  border-radius: 100%;
+  background-color: rgba(255, 255, 255, .8);
+  transition: margin 500ms linear 50ms;
+}
+.filmstrip .btn-area-left,
+.filmstrip .btn-area-right {
+  display: flex;
+  position: absolute;
+  width: 3rem;
+  height: 100%;
+  top: 0;
+  z-index: 1;
+  overflow: hidden;
+  justify-content: center;
+  align-self: center;
+}
+.filmstrip .btn-area-left {
+  left: 0;
+}
+.filmstrip .btn-area-right {
+  right: 0;
+}
+.filmstrip .btn-left {
+  margin-left: -6rem;
+}
+.filmstrip .btn-right {
+  margin-right: -6rem;
+}
+.filmstrip .btn-area-left:hover .btn-left {
+  margin-left: 0rem;
+}
+.filmstrip .btn-area-right:hover .btn-right {
+  margin-right: 0rem;
+}
+
+.thumbnails {
+  height: 12rem;
+  margin: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  list-style-type: none;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  transition: scrollLeft 500ms linear 50ms;
+}
+
+.thumbnails .listitem {
+  height: 10rem;
+  width: 10rem;
+  overflow: hidden;
+  justify-content: space-between;
+  flex: 1 0 auto;
+}
+
+.thumbnails a,
+.thumbnails a:hover,
+.thumbnails a:visited,
+.thumbnails a:active {
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}
+.thumbnails .item {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  position: relative;
+  margin: .2rem;
+  display: flex;
+}
+.thumbnails .itemcaption {
+  display: inline-block;
+  position: absolute;
+  width: 100%;
+  bottom: -35px;
+  background-color: rgba(16, 16, 16, .75);
+  padding: .5rem;
+  overflow: hidden;
+  box-sizing: border-box;
+  transition: bottom 500ms linear 0ms;
+  color: rgba(255, 255, 255, .75);
+}
+.thumbnails .item:hover .itemcaption {
+  bottom: 0px;
+}
+.thumbnails img {
+  min-width: 100%;
+  min-height: 100%;
+  align-self: center;
+  object-fit: cover;
+}
+.showcase {
+  width: 100%;
+  height: 50rem;
+  display: flex;
+  justify-content: center;
+  background-color: #111;
+}
+.showcase img {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit:contain;
+  object-position:center;
+  opacity: 0;
+}
+img.fadein {
+  transition: opacity 500ms linear 50ms;
+  opacity: 1;
+}
+@keyframes fadein {
+  0% {opacity:0};
+  100% {opacity:1};
+}

@@ -1,0 +1,38 @@
+.form-box {
+  padding: 2rem;
+  background-color: #666;
+}
+.form-box form {
+  box-sizing: border-box;
+  padding: 2rem 3rem;
+  margin: 1rem;
+  border: thin solid #ccc;
+  border-radius: .3rem;
+  line-height: 2;
+  color: #fff;
+}
+
+.form-box input,
+.form-box select {
+  margin: .5rem;
+  border: thin solid transparent;
+}
+.form-box [type="reset"],
+.form-box [type="submit"] {
+  border-radius: .3rem;
+}
+
+.msg-box p {
+  height: 0%;
+  opacity: 0;
+  top: 0;
+}
+.msg-box .show {
+  animation: showmsg 3s linear 0;
+}
+
+@keyframes showmsg {
+  0% { height: 0%; opacity: 0}
+  75% { height: 100%; opacity: 1}
+  100% { height: 0%; opacity: 0}
+}

@@ -1,0 +1,79 @@
+.tribar {
+  border: thin solid #333;
+  border-radius: .2rem;
+  box-shadow: 0 0 2px gray;
+}
+.tribar svg {
+  left: 0px;
+  position: relative;
+  pointer-events: none;
+  transition: left 500ms linear 50ms;
+}
+.tribar #top,
+.tribar #bottom {
+  transition: transform 500ms linear 50ms;
+  transform-origin: 5px 50%;
+}
+.tribar #middle {
+  opacity: 1;
+  transition: opacity 500ms linear 50ms;
+}
+.tribar.active svg {
+  left: -2px;
+}
+.tribar.active #top {
+  transform: rotate(45deg);
+}
+.tribar.active #bottom {
+  transform: rotate(-45deg);
+}
+.tribar.active #middle {
+  opacity: 0;
+}
+
+#aside-menu {
+  position: relative;
+  width: 20rem;
+  top: 23px;
+}
+#aside-menu ul {
+  position: relative;
+  list-style-type: none;
+  padding: 0;
+  height: auto;
+  margin: 0;
+  background-color: #999;
+  color: white;
+  overflow: hidden;
+  line-height: 2;
+}
+#aside-menu li{
+  height: 0rem;
+}
+#aside-menu li:not(:last-child) {
+  border-bottom: thin solid white;
+}
+#aside-menu:before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  height: 1px;
+  width: 0px;
+  border-width: 20px 10px;
+  border-color: transparent;
+  border-style: solid;
+  border-bottom-color: #999;
+  pointer-events: none;
+  opacity: 0;
+  top: -40px;
+  left: 20px;
+}
+.active + #aside-menu:before {
+  opacity: 1;
+}
+.active + #aside-menu ul {
+  padding: 0 20px;
+}
+.active + #aside-menu li {
+  height: 2rem;
+}
