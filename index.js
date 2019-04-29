@@ -11,6 +11,7 @@ const query = (req, res, next) => {
   mongo.connect(api_url, { useNewUrlParser: true }, (err, db) => {
     if(err) throw err;
     const mydb = db.db('mongo');
+    console.log(db.admin());
     mydb.collection('Users').find(req.query).toArray((err, data) => res.json({"users": data}));
     db.close();
   });
